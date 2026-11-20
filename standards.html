@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standards — The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    .container{max-width:850px;margin:0 auto;padding:35px 25px 60px;}
+    h2{color:darkblue;font-size:1.6em;margin-bottom:8px;}
+    .subtext{color:#555;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #eee;}
+    h3{color:royalblue;font-size:1.15em;margin:28px 0 10px;}
+    p{margin-bottom:12px;color:#444;}
+    strong{color:#222;}
+    ul{margin:10px 0 15px 28px;}
+    li{margin-bottom:8px;color:#444;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .container{padding:25px 18px 50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>✅ Standards and Compliance</h2>
+    <p class="subtext">Official requirements, expectations, and criteria for Work Immersion</p>
+
+    <h3>⏳ Required Training Hours</h3>
+    <p><strong>Total Hours:</strong> Minimum of 80 hours of work-based learning for Grade 12 students, as mandated by DepEd Order No. 30, s. 2017.</p>
+    <p><strong>Completion Timeline:</strong> Must be completed within the school's prescribed schedule and before graduation requirements are met.</p>
+
+    <h3>🤝 Work Ethics — Expected Standards</h3>
+    <p>Students are expected to demonstrate the following core workplace values throughout the immersion period:</p>
+    <ul>
+      <li><strong>Professionalism</strong> — Maintain appropriate conduct, appearance, and attitude at all times</li>
+      <li><strong>Integrity</strong> — Be honest, reliable, and accountable for your actions and work output</li>
+      <li><strong>Respect</strong> — Treat supervisors, colleagues, and clients with courtesy and dignity</li>
+      <li><strong>Cooperation</strong> — Work effectively as part of a team and follow workplace instructions</li>
+      <li><strong>Commitment</strong> — Complete assigned tasks diligently and within given deadlines</li>
+    </ul>
+
+    <h3>🦺 Personal Protective Equipment (PPE) — Usage Standards</h3>
+    <p>Where applicable, students must strictly comply with PPE requirements:</p>
+    <ul>
+      <li>Wear required safety gear whenever present in designated work areas</li>
+      <li>Inspect PPE before use and report damaged or missing equipment immediately</li>
+      <li>Return borrowed PPE properly after use; do not remove it from the premises without permission</li>
+      <li>Understand what PPE is needed for each specific task — ask your supervisor if unsure</li>
+    </ul>
+
+    <h3>⚠️ Safety and Health Protocols — Compliance Standards</h3>
+    <p>Safety is everyone's responsibility. Students are expected to:</p>
+    <ul>
+      <li>Follow all posted safety signs, warnings, and instructions without exception</li>
+      <li>Know the location of emergency exits, first aid kits, fire extinguishers, and emergency contact numbers</li>
+      <li>Report all accidents, injuries, or unsafe conditions to the supervisor immediately — no matter how minor</li>
+      <li>Participate in safety orientations and briefings provided by the host institution</li>
+      <li>Know and follow proper emergency response procedures during drills or actual incidents</li>
+    </ul>
+
+    <h3>📝 Documentation Requirements</h3>
+    <ul>
+      <li>Daily Time Record (DTR) — verified and signed by workplace supervisor weekly</li>
+      <li>Weekly/Monthly Activity Journal or Reflection Paper</li>
+      <li>Employer Evaluation Form — completed by supervisor at the end of immersion</li>
+      <li>Completion Certificate — issued by partner institution upon finishing required hours</li>
+    </ul>
+
+    <h3>📊 Grading and Assessment Criteria</h3>
+    <p>Your final grade will be computed based on the official DepEd grading components:</p>
+    <ul>
+      <li><strong>20% — Written Works:</strong> Activity journals, reflection papers, quizzes, and other written requirements</li>
+      <li><strong>80% — Performance Tasks:</strong> Supervisor's performance evaluation, completion of required hours, submission of documents, portfolio, and demonstration of workplace ethics and safety compliance</li>
+    </ul>
+
+    <h3>📑 Pre-Deployment Requirements</h3>
+    <p>Before starting your immersion, you must submit the following to your school adviser:</p>
+    <ul>
+      <li>Parent/Guardian Consent Form</li>
+      <li>Medical Certificate or Health Clearance</li>
+      <li>Insurance and Waiver Forms (as required by school)</li>
+      <li>Placement Acceptance Letter from host institution</li>
+    </ul>
+
+    <h3>📋 Attendance and Leave Policies</h3>
+    <ul>
+      <li>Absences must be communicated to both school adviser and workplace supervisor immediately</li>
+      <li>Excused absences require a medical certificate or parent letter — missed hours must be completed as make-up time</li>
+      <li>Excessive unexcused absences may result in extension of immersion period or failure to meet requirements</li>
+      <li>Change of venue is not allowed without written approval from school administration</li>
+    </ul>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>

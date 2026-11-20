@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DepEd Guidelines — The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    .container{max-width:850px;margin:0 auto;padding:35px 25px 60px;}
+    h2{color:darkblue;font-size:1.6em;margin-bottom:8px;}
+    .subtext{color:#555;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #eee;}
+    h3{color:royalblue;font-size:1.15em;margin:28px 0 10px;}
+    p{margin-bottom:12px;color:#444;}
+    strong{color:#222;}
+    ul{margin:10px 0 15px 28px;}
+    li{margin-bottom:8px;color:#444;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .container{padding:25px 18px 50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>📋 Work Immersion Ethics and Workplace Guidelines</h2>
+    <p class="subtext">Building Professionalism, Discipline, and Responsibility in the Workplace</p>
+
+    <p>Work immersion provides students with an opportunity to experience an actual working environment and apply the knowledge and skills they have learned in school. To maintain professionalism and establish a positive relationship with employers and coworkers, students must follow proper workplace ethics and guidelines.</p>
+
+    <p>The following guidelines serve as a reference for Grade 12 Work Immersion students to help them become responsible, respectful, disciplined, and safety-conscious individuals in the workplace.</p>
+
+    <h3>⏰ 1. Punctuality and Time Management</h3>
+    <p><strong>Guideline:</strong> Students must demonstrate proper time management by arriving on time, following their assigned schedules, and completing tasks within the given deadlines.</p>
+    <ul>
+      <li>Arrive at the workplace at least 10–15 minutes before the scheduled starting time.</li>
+      <li>Follow the assigned working hours, break schedules, and dismissal time.</li>
+      <li>Inform the supervisor if unable to report on time before the scheduled start of work.</li>
+    </ul>
+
+    <h3>👔 2. Professional Appearance and Grooming</h3>
+    <p><strong>Guideline:</strong> Students must observe proper dress code and personal grooming as required by the partner institution.</p>
+    <ul>
+      <li>Wear the prescribed uniform, ID badge, or proper business attire at all times.</li>
+      <li>Maintain neat and appropriate hairstyle and personal hygiene.</li>
+      <li>Avoid excessive accessories, heavy makeup, or distracting hairstyles.</li>
+    </ul>
+
+    <h3>🤝 3. Respect and Professional Conduct</h3>
+    <p><strong>Guideline:</strong> Students must show respect to supervisors, coworkers, clients, and everyone in the workplace at all times.</p>
+    <ul>
+      <li>Use polite and professional language at all times.</li>
+      <li>Address supervisors and staff with respect and follow proper workplace etiquette.</li>
+      <li>Listen attentively to instructions and ask for clarification politely when unsure.</li>
+    </ul>
+
+    <h3>📱 4. Attitude and Use of Gadgets</h3>
+    <p><strong>Guideline:</strong> Maintain a positive attitude toward work responsibilities and minimize distractions during working hours.</p>
+    <ul>
+      <li>Mobile phones must be kept on silent mode and used only during break times.</li>
+      <li>Be proactive — ask for tasks when idle rather than waiting to be told what to do.</li>
+      <li>Accept constructive criticism positively and use it to improve performance.</li>
+    </ul>
+
+    <h3>🔒 5. Confidentiality and Workplace Property</h3>
+    <p><strong>Guideline:</strong> Respect the privacy of information and the property of the workplace.</p>
+    <ul>
+      <li>Do not share sensitive information or documents to unauthorized persons.</li>
+      <li>Do not take photos or videos inside the workplace without permission.</li>
+      <li>Handle equipment with care — report any damage or loss immediately.</li>
+    </ul>
+
+    <h3>⚠️ 6. Safety and Emergency Awareness</h3>
+    <p><strong>Guideline:</strong> Observe all safety protocols to ensure personal well-being and that of others in the workplace.</p>
+    <ul>
+      <li>Familiarize yourself with emergency exits, first aid kits, and fire extinguishers.</li>
+      <li>Follow all safety signs, warnings, and instructions provided.</li>
+      <li>Report any accidents, injuries, or unsafe conditions to your supervisor immediately.</li>
+    </ul>
+
+    <!-- 🚨 EMERGENCY HOTLINE REMINDER -- NASA LOOB NG CONTAINER ✅ -->
+    <div style="background:#f0f4ff; border-left:3px solid darkblue; padding:12px 15px; margin-top:40px; font-size:0.95em; color:#333; border-radius:0 6px 6px 0;">
+      <strong>🚨 Emergency Reminder:</strong> In case of emergency while on duty in Taytay, Rizal — save these numbers: Command Center <strong>0985-488-3352</strong> | Police <strong>0917-163-3556</strong> | BFP <strong>0917-148-9964</strong> | MDRRMO <strong>0952-619-9511</strong>
+    </div>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>

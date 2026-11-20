@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acknowledgement — The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    .container{max-width:850px;margin:0 auto;padding:35px 25px 60px;}
+    h2{color:darkblue;font-size:1.6em;margin-bottom:8px;}
+    .subtext{color:#555;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #eee;}
+    h3{color:royalblue;font-size:1.15em;margin:28px 0 10px;}
+    p{margin-bottom:16px;color:#444;}
+    strong{color:#222;}
+    .special-note{background:#f0f4ff;padding:15px;border-radius:6px;border-left:4px solid darkblue;margin:20px 0;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .container{padding:25px 18px 50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>🙏 Acknowledgement</h2>
+    <p class="subtext">Gratitude to everyone who made this platform possible</p>
+
+    <p>This capstone project was built on countless late nights, overwhelming moments of frustration, and heavy mental exhaustion. Bringing both a functional digital platform and a complete research paper to life proved to be one of the most demanding hurdles we have faced as Grade 12 students — but we pulled through.</p>
+
+    <h3>Our Deepest Appreciation</h3>
+
+    <div class="special-note">
+      <p><strong>To Russel,</strong> who spent sleepless nights staring at screens, debugging code, and single-handedly turning our vision into a fully operational website. Your technical patience, resilience, and dedication made the core output of this study a reality. This platform stands as a testament to your hard work — thank you for bringing our idea to life.</p>
+    </div>
+<div class="special-note">
+    <p><strong>To Erika Mostoles, Jusley Mag-isa, Lorenz Quinozes, Akiko Paraiso, Alysa Rodriguez and Rhea Mae Canoy,</strong> who carried the grueling mental burden of the entire research study — from writing and revising every chapter, analyzing data, and fighting off burnout to put our ideas into a complete and meaningful research paper. Your dedication and hard work form the very foundation of this project. Thank you for staying strong and pushing through together.</p>
+</div>
+    <div class="special-note">
+    <p><strong>To our teachers and school administrators,</strong> thank you for guiding us throughout this journey. Your patience, constructive feedback, and constant encouragement pushed us to do our best.</p>
+    </div>
+    <div class="special-note">
+    <p><strong>To our families and friends,</strong> thank you for standing by us through it all. Thank you for understanding the long hours we spent working on this project and for being our constant support system.</p>
+    </div>
+    <div class="special-note">
+    <p><strong>And to every student who will use this platform,</strong> this is for you. We built this because we know how overwhelming work immersion can feel — and no student should feel lost or unprepared. We hope this guide serves you well as you step into your future.</p>
+    </div>
+    <p style="text-align:right; margin-top:40px; font-style:italic;">— The Development Team</p>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>

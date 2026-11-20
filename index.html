@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    /* Top Navigation Bar */
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    /* Drawer Menu */
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    /* Main Content */
+    .container{max-width:850px;margin:0 auto;padding:40px 25px 60px;}
+    .hero{text-align:center;padding:30px 0 50px;}
+    .hero h1{color:darkblue;font-size:2.2em;margin-bottom:10px;}
+    .hero .headline{font-size:1.4em;color:royalblue;font-weight:bold;margin-bottom:25px;}
+    .hero p{font-size:1.05em;margin-bottom:20px;color:#444;text-align:justify;}
+    .cta{display:inline-block;background:darkblue;color:#fff;padding:14px 35px;font-size:1.1em;border-radius:6px;text-decoration:none;margin-top:10px;font-weight:bold;}
+    .cta:hover{background:royalblue;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .hero h1{font-size:1.7em;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="hero">
+      <h1>The Immersion Path</h1>
+      <p class="headline">Your Guide to Work Immersion Success</p>
+      
+      <p>Welcome! This platform serves as your centralized information hub designed to guide Grade 12 students through every stage of work immersion, from pre-deployment requirements and safety protocols to strand-specific tasks. No more scattered group chats or lost handouts because the Immersion Path is here.</p>
+
+      <p>Whether you are just starting to gather your pre-deployment clearances or preparing for your first day on the field, everything you need to succeed is organized right here. Use this hub to check official DepEd policies, review your required 80-hour training milestones, and make sure you understand the grading criteria before you begin.</p>
+
+      <p>Inside, you will also find a complete guide tailored to your specific Senior High School track, covering HUMSS, STEM, ABM, and TVL, along with the essential workplace ethics and safety rules every trainee must follow. If you ever feel unsure about absences, daily logs, or venue policies, our frequently asked questions are ready to help you stay on track.</p>
+
+      <a href="guidelines.html" class="cta">Get prepared. Get deployed. Explore the hub now.</a>
+    </section>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>

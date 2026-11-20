@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    .container{max-width:850px;margin:0 auto;padding:35px 25px 60px;}
+    h2{color:darkblue;font-size:1.6em;margin-bottom:8px;}
+    .subtext{color:#555;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #eee;}
+    h3{color:royalblue;font-size:1.15em;margin:28px 0 10px;}
+    p{margin-bottom:12px;color:#444;}
+    strong{color:#222;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .container{padding:25px 18px 50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>📄 About The Immersion Path</h2>
+    <p class="subtext">Bridging the gap between classroom learning and workplace readiness</p>
+
+    <h3>Our Vision</h3>
+    <p>To establish a seamless, highly accessible, and standardized digital transition experience for all Senior High School students as they step into their work immersion deployments.</p>
+
+    <h3>Our Mission</h3>
+    <p>To eliminate information bottlenecks, reduce pre-deployment anxiety, and provide a centralized, reliable repository of guidelines, strand tasks, and safety protocols that empower students to succeed in their chosen workplaces.</p>
+
+    <h3>Our Core Purpose</h3>
+    <p>During work immersion, students often face fragmented communication — scattered group chat announcements, unclear instructions, and difficulty finding the right information at the right time. Important guidelines get lost, requirements are forgotten, and valuable time is wasted trying to piece everything together.</p>
+    <p><strong>The Immersion Path</strong> was built to solve that exact problem. By bringing together DepEd policies, strand-specific tasks, workplace ethics, safety protocols, and frequently asked questions into one simple platform — everything students need is just a few clicks away.</p>
+
+    <h3>What We Offer</h3>
+    <p>📋 <strong>Clear Guidelines</strong> — Official DepEd policies and standards explained simply</p>
+    <p>📚 <strong>Strand Guides</strong> — Know exactly what to expect based on your track</p>
+    <p>✅ <strong>Compliance Info</strong> — Hours, documents, and grading criteria in one place</p>
+    <p>❓ <strong>FAQs</strong> — Quick answers to the questions students ask most</p>
+
+    <h3>Our Goal</h3>
+    <p>We believe every student deserves to walk into their workplace feeling prepared, informed, and confident. Work immersion is more than just a requirement — it's the first step toward your future career. Let this platform be your guide as you take that first step. 💙</p>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>

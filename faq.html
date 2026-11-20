@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs — The Immersion Path</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#fff;color:#333;line-height:1.7;}
+
+    .top-nav{background:darkblue;color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+    .brand{font-weight:bold;font-size:17px;}
+    .nav-top{display:flex;gap:12px;}
+    .nav-top a{color:#fff;text-decoration:none;font-size:14px;padding:6px 10px;border-radius:4px;}
+    .nav-top a:hover{background:royalblue;}
+    .menu-btn{font-size:24px;cursor:pointer;}
+
+    .drawer-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:none;z-index:200;}
+    .drawer{position:fixed;top:0;right:-280px;width:280px;height:100%;background:#fff;box-shadow:-2px 0 5px rgba(0,0,0,0.2);transition:right 0.3s ease;z-index:300;padding-top:20px;}
+    .drawer.open{right:0;}
+    .drawer-overlay.open{display:block;}
+    .drawer-close{text-align:right;padding:0 20px 15px;font-size:24px;cursor:pointer;color:#666;}
+    .drawer-links{display:flex;flex-direction:column;padding:0 20px;}
+    .drawer-links a{padding:12px 0;border-bottom:1px solid #eee;text-decoration:none;color:#333;}
+    .drawer-links a:hover{color:darkblue;}
+
+    .container{max-width:850px;margin:0 auto;padding:35px 25px 60px;}
+    h2{color:darkblue;font-size:1.6em;margin-bottom:8px;}
+    .subtext{color:#555;margin-bottom:25px;padding-bottom:12px;border-bottom:2px solid #eee;}
+
+    .faq-item{margin-bottom:25px;}
+    .faq-question{font-weight:bold;color:royalblue;margin-bottom:8px;font-size:1.05em;}
+    .faq-answer{color:#444;padding-left:15px;border-left:3px solid #ddd;}
+
+    @media(max-width:768px){
+      .nav-top{gap:4px;}
+      .nav-top a{font-size:12px;padding:5px 6px;}
+      .container{padding:25px 18px 50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="brand">The Immersion Path</div>
+    <div class="nav-top">
+      <a href="home.html">🏠 Home</a>
+      <a href="guidelines.html">📋 DepEd Guidelines</a>
+      <a href="strands.html">📚 Strands</a>
+      <a href="standards.html">✅ Standards</a>
+    </div>
+    <div class="menu-btn" onclick="openDrawer()">☰</div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+  <div class="drawer" id="sideDrawer">
+    <div class="drawer-close" onclick="closeDrawer()">&times;</div>
+    <div class="drawer-links">
+      <a href="home.html">🏠 Home</a>
+      <a href="about.html">📄 About Us</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="acknowledgement.html">🙏 Acknowledgement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>❓ Frequently Asked Questions</h2>
+    <p class="subtext">Everything you need to know about Work Immersion</p>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What is Work Immersion?</p>
+      <p class="faq-answer">A: Work Immersion is a required subject for Grade 12 Senior High School students. It involves 80 hours of hands-on experience or work simulation that allows students to apply their skills and knowledge in a real workplace setting.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What should I do if I get sick during my immersion hours?</p>
+      <p class="faq-answer">A: Notify your work supervisor immediately, secure a medical certificate, and inform your school adviser. Do not report to the venue if you are unfit to work.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: Can I change my immersion venue halfway through?</p>
+      <p class="faq-answer">A: No. Changes to deployment venues are generally not allowed unless approved by the school administration due to valid, extreme circumstances.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: How are my daily tasks recorded?</p>
+      <p class="faq-answer">A: You are required to log your daily activities and hours in your Daily Time Record (DTR) and reflection journal, which will be checked by your adviser.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What should I do if I cannot report for work?</p>
+      <p class="faq-answer">A: Inform your immediate supervisor and school focal person as early as possible. Follow your workplace protocol for filing leave or reporting absences.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What do I need to prepare before my first day?</p>
+      <p class="faq-answer">A: Bring your completed DTR form, school ID, proper uniform, pen and notebook, and a positive attitude. Review your workplace's rules and dress code beforehand.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: Can I use my phone while on duty?</p>
+      <p class="faq-answer">A: Generally, no — unless it is required for your specific task. Keep your phone on silent mode and use it only during your break time or in case of emergency.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What if I make a mistake at work?</p>
+      <p class="faq-answer">A: Be honest — admit it, apologize politely, and ask your supervisor how you can fix it. Everyone makes mistakes when learning; what matters most is that you take responsibility and learn from it.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: Do I get paid during work immersion?</p>
+      <p class="faq-answer">A: No. Work Immersion is part of your school curriculum and is not considered employment. However, some partner institutions may provide a small allowance — this is entirely voluntary and not required by DepEd.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What happens if I don't complete my required hours?</p>
+      <p class="faq-answer">A: You will need to complete make-up hours to meet the 80-hour requirement before you can be issued a completion certificate. Failure to complete required hours may affect your grade and graduation clearance.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: Is work immersion graded?</p>
+      <p class="faq-answer">A: Yes. Your final grade is based on your supervisor's evaluation, attendance and hours completed, submitted documents, and final portfolio output.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: What should I wear on my first day?</p>
+      <p class="faq-answer">A: Always wear your complete school uniform and ID unless your host institution provides a different dress code. Dress neatly and professionally — avoid casual clothes like shorts, slippers, or ripped jeans.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-question">Q: Who do I approach if I have problems at my immersion site?</p>
+      <p class="faq-answer">A: Talk to your workplace supervisor first if it's a work-related concern. If the issue persists or involves a sensitive matter, inform your school adviser or work immersion focal person immediately — they are there to support you.</p>
+    </div>
+  </div>
+
+  <script>
+    function openDrawer(){document.getElementById('sideDrawer').classList.add('open');document.getElementById('drawerOverlay').classList.add('open');}
+    function closeDrawer(){document.getElementById('sideDrawer').classList.remove('open');document.getElementById('drawerOverlay').classList.remove('open');}
+  </script>
+</body>
+</html>
